@@ -4,6 +4,9 @@ const itemList = document.querySelector('.list');
 // Form submit event
 form.addEventListener('submit', addItem);
 
+// Delete item
+itemList.addEventListener('click', removeItem);
+
 // Add new item to list
 function addItem(e) {
     e.preventDefault();
@@ -34,13 +37,12 @@ function addItem(e) {
 
     // Add new li to the list
     itemList.appendChild(li);
-
-    // Delete item
-    itemList.addEventListener('click', removeItem);
-
-    // console.log(li);
 }
 
+// Delete item from the list
 function removeItem(e) {
-    console.log(1);
+    // Delete item
+    if (e.target.classList.contains('delete')) {
+        console.log(1);
+    };
 }
